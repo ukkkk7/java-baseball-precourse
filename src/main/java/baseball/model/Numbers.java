@@ -47,6 +47,10 @@ public class Numbers {
     private boolean isSamePosition(int number, int position){
         return comNumberList.contains(number) && comNumberList.indexOf(number) == position;
     }
+    private boolean isContainNumber(int number, int position){
+        return comNumberList.contains(number) && comNumberList.indexOf(number) != position;
+    }
+
 
     public int countStrike(Numbers userNumbers) {
         int strike = 0;
@@ -58,8 +62,15 @@ public class Numbers {
         return strike;
     }
 
-
-
+    public int countBall(Numbers userNumbers){
+        int ball = 0;
+        for(int i=0; i<comNumberList.size(); i++){
+            if(userNumbers.isContainNumber(Integer.parseInt(comNumberList.get(i)), i)){
+                ball++;
+            }
+        }
+        return ball;
+    }
 
 
 }
