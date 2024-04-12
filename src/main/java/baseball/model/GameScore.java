@@ -18,5 +18,13 @@ public class GameScore {
         return this.ballCount;
     }
 
+    public boolean allStrike(){
+        if(strikeCount == 3){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }

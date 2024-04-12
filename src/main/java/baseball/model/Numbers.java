@@ -18,7 +18,6 @@ public class Numbers {
     }
 
     public Numbers(String number){
-        validUserNumber(number);
         this.userNumberList = Arrays.asList(number);
     }
 
@@ -35,13 +34,6 @@ public class Numbers {
         return comNumberList;
     }
 
-    public String validUserNumber(String input){
-        numberValidator.validNumberCount(input);
-        numberValidator.validNumberFormat(input);
-        numberValidator.validNumberRange(input);
-        numberValidator.validDuplicateNumber(input);
-        return input;
-    }
 
     public GameScore compareToInputNumber(Numbers userNumbers) {
         GameScore score = new GameScore(countBall(userNumbers), countStrike(userNumbers));
