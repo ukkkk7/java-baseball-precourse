@@ -10,6 +10,9 @@ public class GameService {
     private List<String> comNumberList = new ArrayList<>();
     private String comNumber;
 
+
+
+    //난수생성 메소드
     public void generateNumber() {
 
         while(comNumberList.size()<3) {

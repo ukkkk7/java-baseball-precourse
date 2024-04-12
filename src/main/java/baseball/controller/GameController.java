@@ -9,6 +9,7 @@ public class GameController {
 
     public void GameStart(){
         do {
+
             gameService.generateNumber();
         }while (restart());
     }
