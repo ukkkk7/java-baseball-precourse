@@ -1,22 +1,21 @@
 package baseball.model;
 
-import baseball.validator.NumberValidator;
-import camp.nextstep.edu.missionutils.Randoms;
-import java.util.ArrayList;
-import java.util.List;
+public class GameScore {
 
-public class GameService {
+    private int strikeCount;
+    private int ballCount;
 
-    private int strike = 0;
-    private int ball = 0;
-
-
-    public void strikeCount(){
-        this.strike++;
+    public GameScore(int strikeCount, int ballCount){
+        this.ballCount = ballCount;
+        this.strikeCount = strikeCount;
     }
 
-    public void ballCount(){
-        this.ball++;
+    public int getStrikeCount(){
+        return this.strikeCount;
+    }
+
+    public int getBallCount(){
+        return this.ballCount;
     }
 
 

@@ -43,6 +43,10 @@ public class Numbers {
         return input;
     }
 
+    public GameScore compareToInputNumber(Numbers userNumbers) {
+        GameScore score = new GameScore(countBall(userNumbers), countStrike(userNumbers));
+        return score;
+    }
 
     private boolean isSamePosition(int number, int position){
         return comNumberList.contains(number) && comNumberList.indexOf(number) == position;
