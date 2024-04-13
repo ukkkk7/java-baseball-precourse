@@ -22,12 +22,12 @@ public class InputView {
         return new Numbers(inputNum);
     }
 
-    public static int retryAsk(){
+    public static String retryAsk(){
         OutputView.printRetryMessage();
-        int answer = Integer.parseInt(Console.readLine());
+        String input = Console.readLine();
         restartNumberValidator = new RestartNumberValidator();
-        restartNumberValidator.validRestartNumber(answer);
-        return answer;
+        restartNumberValidator.validRestartNumber(input);
+        return input;
     }
 
 

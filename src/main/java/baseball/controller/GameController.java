@@ -33,11 +33,7 @@ public class GameController {
     }
 
     public boolean restart(){
-        if(InputView.retryAsk() == 1){
-            return true;
-        }
-        return false;
+        return InputView.retryAsk().equals("1");
     }
-
 
 }
