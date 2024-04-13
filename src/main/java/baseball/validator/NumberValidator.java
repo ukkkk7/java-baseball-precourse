@@ -29,7 +29,7 @@ public class NumberValidator {
     }
 
     public void validNumberFormat(String input){
-        if(Pattern.matches("^[1-9]*$" , input)){
+        if(!input.matches("^[\\d]*$")){
             throw new IllegalArgumentException(NUMBER_FORMAT_ERROR_MESSAGE);
         }
     }
