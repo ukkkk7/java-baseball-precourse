@@ -13,13 +13,18 @@ public class GameController {
 
     public void play(){
         do {
+            generateComNumber();
             GameStart();
-        }while (!restart());
+        }while (restart());
+    }
+
+    public void generateComNumber(){
+        computerNumberList = new Numbers();
     }
 
     public void GameStart(){
+        OutputView.printGameStartMessage();
         do {
-            computerNumberList = new Numbers();
             Numbers userNumberList = InputView.readInputNum();
             gameService = computerNumberList.compareToInputNumber(userNumberList);
             OutputView.printResult(gameService);

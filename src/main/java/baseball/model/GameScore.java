@@ -6,24 +6,20 @@ public class GameScore {
     private int ballCount;
 
     public GameScore(int strikeCount, int ballCount){
-        this.ballCount = ballCount;
         this.strikeCount = strikeCount;
+        this.ballCount = ballCount;
     }
 
     public int getStrikeCount(){
-        return this.strikeCount;
+        return strikeCount;
     }
 
     public int getBallCount(){
-        return this.ballCount;
+        return ballCount;
     }
 
     public boolean allStrike(){
-        if(strikeCount == 3){
-            return true;
-        } else {
-            return false;
-        }
+      return strikeCount == 3;
     }
 
 

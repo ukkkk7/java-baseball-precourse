@@ -11,14 +11,13 @@ public class InputView {
 
     public static Numbers readInputNum(){
 
-        OutputView.printGameStartMessage();
         OutputView.printInputMessage();
         String inputNum = Console.readLine();
-
-        numberValidator.validNumberCount(inputNum);
+        numberValidator = new NumberValidator();
         numberValidator.validNumberFormat(inputNum);
         numberValidator.validNumberRange(inputNum);
         numberValidator.validDuplicateNumber(inputNum);
+        numberValidator.validNumberCount(inputNum);
 
         return new Numbers(inputNum);
     }
@@ -26,6 +25,7 @@ public class InputView {
     public static int retryAsk(){
         OutputView.printRetryMessage();
         int answer = Integer.parseInt(Console.readLine());
+        restartNumberValidator = new RestartNumberValidator();
         restartNumberValidator.validRestartNumber(answer);
         return answer;
     }
