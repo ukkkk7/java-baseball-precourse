@@ -5,6 +5,7 @@ import baseball.model.GameScore;
 import baseball.model.Numbers;
 import baseball.view.InputView;
 import baseball.view.OutputView;
+import camp.nextstep.edu.missionutils.Console;
 
 public class GameController {
 
@@ -16,6 +17,7 @@ public class GameController {
             generateComNumber();
             GameStart();
         }while (restart());
+        OutputView.printGameFinishMessage();
     }
 
     public void generateComNumber(){

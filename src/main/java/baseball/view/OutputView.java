@@ -10,6 +10,7 @@ public class OutputView {
     private static final String NOTHING_MESSAGE = "낫싱";
     private static final String END_MESSAGE = "3개의 숫자를 모두 맞히셨습니다! 게임 종료";
     private static final String RETRY_MESSAGE = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
+    private static final String GAME_FINISH_MESSAGE = "게임을 종료합니다.";
 
 
 
@@ -23,6 +24,7 @@ public class OutputView {
     public static void printEndMessage(){
         System.out.println(END_MESSAGE);
     }
+    public static void printGameFinishMessage() { System.out.println(GAME_FINISH_MESSAGE); }
     public static void printRetryMessage(){
         System.out.println(RETRY_MESSAGE);
     }
