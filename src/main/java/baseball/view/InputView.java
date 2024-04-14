@@ -6,14 +6,13 @@ import baseball.validator.RestartNumberValidator;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
-    private static NumberValidator numberValidator;
-    private static RestartNumberValidator restartNumberValidator;
+
 
     public static Numbers readInputNum(){
 
         OutputView.printInputMessage();
         String inputNum = Console.readLine();
-        numberValidator = new NumberValidator();
+        NumberValidator numberValidator = new NumberValidator();
         numberValidator.validNumberFormat(inputNum);
         numberValidator.validNumberRange(inputNum);
         numberValidator.validDuplicateNumber(inputNum);
@@ -25,7 +24,7 @@ public class InputView {
     public static String retryAsk(){
         OutputView.printRetryMessage();
         String input = Console.readLine();
-        restartNumberValidator = new RestartNumberValidator();
+        RestartNumberValidator restartNumberValidator = new RestartNumberValidator();
         restartNumberValidator.validRestartNumber(input);
         return input;
     }

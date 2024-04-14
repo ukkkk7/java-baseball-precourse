@@ -1,6 +1,5 @@
 package baseball.model;
 
-import baseball.validator.NumberValidator;
 import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.ArrayList;
@@ -9,9 +8,7 @@ import java.util.List;
 
 public class Numbers {
 
-    //private List<String> comNumberList;
     private List<String> numberList;
-    private static NumberValidator numberValidator;
 
     public Numbers(){
         this.numberList = generateNumber();
@@ -41,16 +38,6 @@ public class Numbers {
         GameScore score = new GameScore(countStrike(userNumbers), countBall(userNumbers));
         return score;
     }
-/*
-    private boolean isSamePosition(int number, int position) {
-       return numberList.contains(number) && numberList.indexOf(number) == position;
-    }
-
-    private boolean isContainNumber(int number, int position){
-        return (numberList.contains(number) && numberList.indexOf(number) != position);
-    }
-
-*/
     public int countStrike(Numbers userNumbers) {
         int strike = 0;
         for(int i=0; i<numberList.size(); i++){
